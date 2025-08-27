@@ -3,12 +3,6 @@
   padding: 0;
   text-align: center;
 }
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    height: 4rem;
-    line-height: 4rem;
-  }
 
 h1 {
   background-color: #081b31;
@@ -35,7 +29,6 @@ img {
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  
 }
 
 .choice {
@@ -56,24 +49,25 @@ img {
   font-size: 3rem; /* fixed mistake: "font: size 2rem;" */
   gap: 5rem;
 }
-#comp-score:hover{
-    opacity: 0.5;
+
+#comp-score:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
-#user-score:hover{
-    opacity: 0.5;
+#user-score:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
 #user-score, #comp-score {
-  
   font-size: 4rem;
 }
 
 .msg-container {
   margin-top: 5rem;
 }
+
 #msg {
   font-size: 2rem;
   background-color: #081b31;
@@ -82,8 +76,51 @@ img {
   padding: 1rem;
   border-radius: 1rem;
 }
-#msg:hover{
-    opacity: 0.5;
+
+#msg:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
+/* ------------------------------
+   📱 Mobile View Styles
+   ------------------------------ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .choices {
+    flex-direction: column; /* stack items vertically */
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+    margin-top: 1rem;
+  }
+
+  .score-board {
+    flex-direction: column; /* stack scores */
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  #user-score, #comp-score {
+    font-size: 3rem;
+  }
+
+  #msg {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+}
